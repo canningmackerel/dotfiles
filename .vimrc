@@ -29,4 +29,3 @@
 
 " complement
 :set wildmode=list:longest " コマンド入力時の補完をbashのように途中までの補完とする
-
