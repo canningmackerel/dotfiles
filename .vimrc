@@ -20,8 +20,8 @@
 :nnoremap <C-k> <C-w>k
 :nnoremap <C-l> <C-w>l
 :inoremap "<Enter> ""<Left> |" 「" + Enter」で自動補完
+:inoremap (<Enter> ()<Left> |" 「( + Enter」で自動補完
 :inoremap {<Enter> {}<Left><CR><Up><End><Esc>o<TAB> |" 「{ + Enter」で自動補完
-:inoremap (<Enter> ()<Left><CR><Up><End><Esc>o<TAB> |" 「( + Enter」で自動補完
 
 " screen
 :set splitright " 画面を垂直分割時に右に開く
