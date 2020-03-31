@@ -30,3 +30,31 @@
 
 " complement
 :set wildmode=list:longest " コマンド入力時の補完をbashのように途中までの補完とする
+
+" delete key
+set backspace=indent,eol,start
+
+" jedi-vim conf
+autocmd FileType python setlocal completeopt-=preview " do not show document window
+set completeopt+=longest
+let g:jedi#popup_on_dot = 0 " do not autocomplete with dot key
+let g:jedi#popup_select_first = 0 " do not select suggest list
+
+" vim-flake8 conf
+autocmd BufWritePost *.py call flake8#Flake8() " check every time
+let g:flake8_show_in_gutter=1 " show err on gutter
+let g:flake8_show_quickfix=0 " do not show quickfix window
+
+
+" when vim make install
+"set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.7/Python
+"set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.7
+
+" vim-plug
+call plug#begin()
+Plug 'tomasr/molokai'
+Plug 'davidhalter/jedi-vim'
+Plug 'nvie/vim-flake8'
+Plug 'w0rp/ale'
+call plug#end()
+
