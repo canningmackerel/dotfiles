@@ -5,7 +5,8 @@ alias rm='rm -i'
 stty stop undef
 export HISTSIZE=10000
 export HISTFILESIZE=10000
-export PATH=/usr/local/bin/python:$PATH
+
+alias python=python3
 
 function peco_checkout(){
     git checkout "$(git branch | awk -F ' ' '{print $NF}' | peco)"
