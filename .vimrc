@@ -13,16 +13,20 @@
 " search
 :set ignorecase " 検索時に大文字小文字を区別しない
 
-" key bind
+" normal mode key bind
 :nnoremap <F2> :noh<CR> |"  検索ハイライトをF2で消す
 :nnoremap <C-h> <C-w>h
 :nnoremap <C-j> <C-w>j
 :nnoremap <C-k> <C-w>k
 :nnoremap <C-l> <C-w>l
+:noremap <C-n> :NERDTree<CR>
+
+" insert mode key bind
 :inoremap '<Enter> ''<Left> |" 「' + Enter」で自動補完
 :inoremap "<Enter> ""<Left> |" 「" + Enter」で自動補完
 :inoremap (<Enter> ()<Left> |" 「( + Enter」で自動補完
 :inoremap {<Enter> {}<Left><CR><Up><End><Esc>o<TAB> |" 「{ + Enter」で自動補完
+
 
 " screen
 :set splitright " 画面を垂直分割時に右に開く
@@ -56,5 +60,6 @@ Plug 'tomasr/molokai'
 Plug 'davidhalter/jedi-vim'
 Plug 'nvie/vim-flake8'
 Plug 'w0rp/ale'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
