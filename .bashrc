@@ -12,5 +12,9 @@ function peco_checkout(){
 }
 alias pc="peco_checkout"
 
+# prompt setting
+PROMPT_COMMAND='echo'
+
 # prompt color
-PS1='\[\e[42m\] \w\[\e[m\] $ '
+PS1='\[\e[42m\]$(pwd)\[\e[m\] $ '
+
