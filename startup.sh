@@ -14,3 +14,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ln -s $PWD/.vimrc ~/.vimrc
 ln -s $PWD/.bashrc ~/.bashrc
 ln -s ~/.bashrc ~/.bash_profile
+
+# install git-prompt
+curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh

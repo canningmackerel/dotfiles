@@ -16,5 +16,12 @@ alias pc="peco_checkout"
 PROMPT_COMMAND='echo'
 
 # prompt color
-PS1='\[\e[42m\]$(pwd)\[\e[m\] $ '
+export PS1='\[\e[1;37;42m\]$(pwd)\[\e[m\] (\[\e[32m\[$(__git_ps1 "%s")\[\e[m\[) $ '
 
+# ls color setting
+alias ls='ls -G'
+export LSCOLORS=xcfxcxdxbxegedabagacad
+
+# git-prompt
+source ~/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
