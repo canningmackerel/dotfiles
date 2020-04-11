@@ -14,18 +14,17 @@
 :set ignorecase " 検索時に大文字小文字を区別しない
 
 " normal mode key bind
-:nnoremap <F2> :noh<CR> |"  検索ハイライトをF2で消す
+:nnoremap <F2> :noh<CR> " 検索ハイライトをF2で消す
 :nnoremap <C-h> <C-w>h
 :nnoremap <C-j> <C-w>j
 :nnoremap <C-k> <C-w>k
 :nnoremap <C-l> <C-w>l
-:noremap <C-n> :NERDTree<CR>
 
 " insert mode key bind
-:inoremap '<Enter> ''<Left> |" 「' + Enter」で自動補完
-:inoremap "<Enter> ""<Left> |" 「" + Enter」で自動補完
-:inoremap (<Enter> ()<Left> |" 「( + Enter」で自動補完
-:inoremap {<Enter> {}<Left><CR><Up><End><Esc>o<TAB> |" 「{ + Enter」で自動補完
+:inoremap '<Enter> ''<Left>
+:inoremap "<Enter> ""<Left>
+:inoremap (<Enter> ()<Left>
+:inoremap {<Enter> {}<Left><CR><Up><End><Esc>o
 
 
 " screen
@@ -49,6 +48,9 @@ autocmd BufWritePost *.py call flake8#Flake8() " check every time
 let g:flake8_show_in_gutter=1 " show err on gutter
 let g:flake8_show_quickfix=0 " do not show quickfix window
 
+" NERDTree conf
+let NERDTreeShowHidden=1 " show hidden file 
+:noremap <C-n> :NERDTree<CR>
 
 " when vim make install
 "set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.7/Python
